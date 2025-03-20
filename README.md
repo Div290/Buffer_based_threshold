@@ -1,17 +1,33 @@
-# DAdEE: Unsupervised Domain Adaptation in Early Exit PLMs
-This repository is the official implementation of the work DAdEE: Unsupervised Domain Adaptation in Early Exit PLMs
+# Buffer based threshold adaptation
+In this repo, we model the problem of setting the threshold in an early exit framework based on the input buffer size
 
 ## Requirements
 
-We built upon our code using the [huggingface transformers](https://huggingface.co/docs/transformers/en/index).
-
-## Training 
-
-To fine-tune a pre-trained language model on and train the internal classifiers follow the command:
-
-```Training, adaptation and Inference
-python3 main.py --pretrain --adapt --src books --tgt dvd
+```Requirements
+conda env create -f environment.yaml
 ```
 
-## Code acknowledgement
-We acknowledge the [bert-aad](https://github.com/bzantium/bert-AAD/blob/master/README.md) repository and thank them for making the source code publically available 
+## Datasets
+Datasets can be downloaded from the dataset.ipynb file, will be adding more datasets soon.
+
+## Step-1: Training the early exit model and creating a csv file that saves confidences of exits, prediction of exits and true labels 
+
+Befor this step, do not forget to set the correct dataset path in the param.py file.
+
+To fine-tune a pre-trained language model and train the internal classifiers follow the command:
+
+```Training and creating the csv of confidences
+python main.py --pretrain --adapt --src books --tgt dvd
+```
+
+## Step2: Run the simulation
+
+After this step run this command to get the simulation results:
+
+```Simulation run
+python simulation.py
+```
+
+param.py file contains all the parameters related to the simulation.
+
+
