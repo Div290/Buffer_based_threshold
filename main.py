@@ -268,7 +268,7 @@ def main():
     # evaluate(src_encoder, src_classifier, src_val_data_loader)
     print("source test dataset")
     _, df = evaluate(src_encoder, src_classifier, src_data_eval_loader)
-    df.to_csv(param.dataframe_path, index = False)
+    df.to_csv(param.dataframe_save_path, index = False)
     # evaluate(src_encoder, src_classifier, tgt_data_all_v_loader)
 
     # for params in src_encoder.parameters():
