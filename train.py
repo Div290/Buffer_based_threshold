@@ -240,7 +240,7 @@ def evaluate(encoder, classifier, data_loader):
 
     # Convert results to DataFrame
     df_results = pd.DataFrame(results)
-    df_results.to_csv("evaluation_results.csv", index=False)  # Save to CSV
+    # df_results.to_csv("evaluation_results.csv", index=False)  # Save to CSV
 
     return acc, df_results  # Return accuracy and DataFrame
 
