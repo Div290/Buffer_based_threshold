@@ -117,7 +117,7 @@ def main():
     print("=== Processing datasets ===")
     if args.src in ['imdb']:
         src_x, src_y = CSV2Array(param.imdb_train_path)
-        src_test_x, src_test_y = CSV2Array(param.imdb_train_path)
+        src_test_x, src_test_y = CSV2Array(param.imdb_test_path)
     elif args.src in ['QNLI']:
         rte_path = param.qnli_train_path
 
