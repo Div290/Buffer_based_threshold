@@ -1,8 +1,19 @@
 import pandas as pd
 import param
 
-# Load the data (replace with actual file path if reading from CSV)
-df = pd.read_csv(param.dataframe_path)  # Modify as needed
+# Path to the CSV file
+csv_path = param.dataframe_path  # Modify as needed
+
+# Check if the file exists
+if not os.path.exists(csv_path):
+    print("ERROR: CSV file not found!")
+    print('Please first create the CSV file by running the following command:\n')
+    print('python main.py --pretrain --src dataset --batch_size 32 --pre_epochs 2\n')
+    exit(1)  # Exit the program with an error code
+
+# Load the data
+df = pd.read_csv(csv_path)
+print("✅ CSV file loaded successfully!")
 
 
 # Load the DataFrame (assuming it's already read as `df`)
