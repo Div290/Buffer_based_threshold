@@ -1,8 +1,9 @@
 import pandas as pd
 import param
+import os
 
 # Path to the CSV file
-csv_path = param.dataframe_path  # Modify as needed
+csv_path = param.dataframe_save_path  # Modify as needed
 
 # Check if the file exists
 if not os.path.exists(csv_path):
@@ -13,7 +14,7 @@ if not os.path.exists(csv_path):
 
 # Load the data
 df = pd.read_csv(csv_path)
-print("✅ CSV file loaded successfully!")
+print("CSV file loaded successfully!")
 
 
 # Load the DataFrame (assuming it's already read as `df`)
