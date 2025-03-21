@@ -17,7 +17,7 @@ Befor this step, do not forget to set the correct dataset path in the param.py f
 To fine-tune a pre-trained language model and train the internal classifiers follow the command:
 
 ```Training and creating the csv of confidences
-python main.py --pretrain --src books
+python main.py --pretrain --src QNLI
 ```
 
 ## Step2: Run the simulation
