@@ -1,0 +1,14 @@
+# Large model and dataset files
+*.pt
+*.tar.gz
+*.zip
+
+# Directories to ignore
+snapshots/
+imdb_data/
+__pycache__/
+*.log
+*.pt
+*.tar.gz
+snapshots/
+imdb_data/
