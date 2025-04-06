@@ -22,10 +22,22 @@ python main.py --pretrain --src QNLI
 
 ## Step2: Run the simulation
 
-After this step run this command to get the simulation results:
+After this step run this command to get the simulation results of AdaEE buffer:
 
 ```Simulation run
 python simulation.py
+```
+
+If you want to run policy gradient: 
+
+```PG-Simulation run
+python policy_gradient.py
+```
+
+For Tsallis Policy Gradient:
+
+```TPG-Simulation run
+python policy_gradient_tsallis.py
 ```
 
 param.py file contains all the parameters related to the simulation.
