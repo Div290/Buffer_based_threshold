@@ -1,3 +1,5 @@
+import json
+
 from .scheduler import Scheduler, ScheduleAction, time_wrapper
 from .adaee import AdaEEBuffer, AdaEEParam, AdaEEOrigin, AdaEEPolicyGradient, AdaEETsallisPolicyGradient
 
@@ -9,6 +11,9 @@ __all__ = [
 
 
 def init_scheduler(model_profile,  scheduler_config, maxsize=None, log_path=None):
+    if isinstance(scheduler_config, str):
+        with open(scheduler_config, 'r') as f:
+            scheduler_config = json.load(f)
     scheduler_type = scheduler_config.pop('type')
     arrival_estimate_window = scheduler_config.pop('arrival_estimate_window', None)
     if scheduler_type == 'adaee_origin':

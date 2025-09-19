@@ -1,8 +1,9 @@
 from copy import copy
 from typing import Union, Dict, List
 from multiprocessing import Array, Lock
-import numpy as np
 from math import ceil, floor
+
+import numpy as np
 
 from .utils import AdaEEUpdate, BasePolicy, AdaEEBasic
 from ..scheduler import ScheduleAction, time_wrapper
