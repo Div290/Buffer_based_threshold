@@ -107,7 +107,7 @@ class AdaEEParam(AdaEEBasic):
     ):
         max_memory_size = None  # only support queue length
         super(AdaEEParam, self).__init__(
-            model_profile, maxsize, max_memory_size, arrival_estimate_window, log_path, **kwargs
+            model_profile, maxsize, arrival_estimate_window, log_path, **kwargs
         )
         self.skip_exit_threshold = kwargs.get("skip_exit_threshold", 1.1)
         self.active_gates = active_gates if active_gates else [i for i in range(len(self._gates) - 1)]
